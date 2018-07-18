@@ -1,5 +1,5 @@
 object Problem2 {
-  def main(args: Array[String]) {
+  def solution(limit: Int): Int = {
     // n is the nth term in the fib sequence starting with 1, 2
     var fib_cache = Map(1 -> 1, 2 -> 2) // padded with 0 so index matches fib position
 
@@ -18,11 +18,11 @@ object Problem2 {
     var sum = 0
     var i = 1
 
-    while (fib(i) < 4000000) {
+    while (fib(i) < limit) {
       if (fib(i) % 2 == 0) sum += fib(i)
       i += 1
     }
 
-    println(sum)
+    sum
   }
 }
