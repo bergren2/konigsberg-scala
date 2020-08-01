@@ -1,6 +1,5 @@
-[![Build Status](https://travis-ci.com/bergren2/konigsberg-scala.svg?branch=master)](https://travis-ci.com/bergren2/konigsberg-scala)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=bergren2_konigsberg-scala&metric=alert_status)](https://sonarcloud.io/dashboard?id=bergren2_konigsberg-scala)
-[![Coverage Status](https://coveralls.io/repos/github/bergren2/konigsberg-scala/badge.svg?branch=master)](https://coveralls.io/github/bergren2/konigsberg-scala?branch=master)
+![Build Status](https://github.com/bergren2/konigsberg-scala/workflows/build/badge.svg)
+[![Maintainability](https://api.codeclimate.com/v1/badges/139abd9599a72dcebbc6/maintainability)](https://codeclimate.com/github/bergren2/konigsberg-scala/maintainability)
 
 # [Königsberg](https://github.com/bergren2/konigsberg) - Scala
 
