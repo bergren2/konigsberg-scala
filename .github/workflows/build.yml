@@ -15,7 +15,7 @@ jobs:
       uses: actions/setup-java@v3
       with: # should match .sdkmanrc
         distribution: temurin
-        java-version: 17.0.8.1
+        java-version: 17.0.8
         cache: sbt
 
     - name: Compile
