@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Setup Scala & sbt
-      uses: sdkman/sdkman-action@v1
+      uses: sdkman/sdkman-action@b1f9b69
       id: sdkman
 
     - name: Compile
