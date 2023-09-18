@@ -5,7 +5,17 @@
 
 ## Setup
 
-Install [sbt](https://www.scala-sbt.org/)
+### macOS
+
+```shell
+sdk env install
+```
+
+### Windows
+
+```shell
+scoop install sbt
+```
 
 ## Testing
 
