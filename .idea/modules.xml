@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/konigsberg-scala.iml" filepath="$PROJECT_DIR$/.idea/konigsberg-scala.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Project Euler.iml" filepath="$PROJECT_DIR$/.idea/modules/Project Euler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/konigsberg-scala.iml" filepath="$PROJECT_DIR$/.idea/modules/konigsberg-scala.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/konigsberg-scala-build.iml" filepath="$PROJECT_DIR$/.idea/modules/konigsberg-scala-build.iml" />
     </modules>
   </component>
 </project>
