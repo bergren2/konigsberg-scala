@@ -1,6 +1,6 @@
-import org.scalatest.FunSuite
+import org.scalatest.funsuite.AnyFunSuite
 
-class Problem2Suite extends FunSuite {
+class Problem2Suite extends AnyFunSuite {
   test("simpler problem") {
     assertResult(44) {
       Problem2.solution(90)
