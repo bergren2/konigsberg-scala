@@ -1,21 +1,33 @@
 name: build
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
-    - name: Setup Scala
-      uses: olafurpg/setup-scala@v6
+    - name: Setup JDK
+      uses: actions/setup-java@v3
+      with: # should match .sdkmanrc
+        distribution: temurin
+        java-version: 17.0.8
+        cache: sbt
 
     - name: Compile
       run: sbt compile
 
-    - name: Run tests
-      run: sbt test
+    - name: Run tests w/ coverage
+      run: sbt clean coverage test
+
+    - name: Aggregate coverage into report and upload
+      uses: paambaati/codeclimate-action@v3.0.0
+      env:
+        CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
+      with:
+        coverageCommand: sbt coverageAggregate
+        coverageLocations: ${{github.workspace}}/target/**/coverage-report/cobertura.xml:cobertura
