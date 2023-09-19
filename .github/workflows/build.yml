@@ -21,10 +21,13 @@ jobs:
     - name: Compile
       run: sbt compile
 
-    - name: Run tests
+    - name: Run tests w/ coverage
+      run: sbt clean coverage test
+
+    - name: Aggregate coverage into report and upload
       uses: paambaati/codeclimate-action@v3.0.0
       env:
         CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
       with:
-        coverageCommand: sbt clean coverage test && sbt coverageAggregate
+        coverageCommand: sbt coverageAggregate
         coverageLocations: ${{github.workspace}}/target/**/coverage-report/cobertura.xml:cobertura
