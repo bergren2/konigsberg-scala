@@ -22,4 +22,9 @@ jobs:
       run: sbt compile
 
     - name: Run tests
-      run: sbt clean test
+      uses: paambaati/codeclimate-action@v3.0.0
+      env:
+        CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
+      with:
+        coverageCommand: sbt clean coverage test && sbt coverageAggregate
+        coverageLocations: ${{github.workspace}}/target/**/coverage-report/cobertura.xml:cobertura
